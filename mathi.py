@@ -19,15 +19,15 @@ def get_coordinates(nombre_archivo):
                 
     return coordenadas
 
-# Ejemplo de uso con tu nombre de archivo:
+
 nombre_del_archivo_csv = 'map_data.csv'
 lista_de_coordenadas = get_coordinates(nombre_del_archivo_csv)
 
 
-# Agregar mapa de calor
+
 HeatMap(lista_de_coordenadas).add_to(mapa)  
 
-# Agregar marcadores
+
 for ciudad in lista_de_coordenadas:
     folium.Marker(location=ciudad).add_to(mapa)
 
